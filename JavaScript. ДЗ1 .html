@@ -1,0 +1,60 @@
+﻿<!-- 
+    1. По координатам двух точек, которые вводит пользователь, определить уравнение прямой, проходящей через эти точки.
+    Общий вид уравнения: y = kx + b; где k = (y1 - y2) / (x1 - x2), b = y2 - k*x2.
+    
+    2. Обменять значения двух переменных, используя третью (буферную) переменную.
+    
+    3. Объявите две переменные: admin и name. Запишите в name строку "Василий". Замените значение из name в admin. Выведите admin.
+    
+    4. Получить от пользователя данные о пользователе: имя, фамилию, возраст. Обработать их и вывести на экран.
+    
+    5. Запросите у пользователя его возраст, после чего выведите на экран модальное окно с вопросом: "Ваш возраст ...(введеное пользователем число) лет?". Далее в зависимости от выбора пользователя выводится модальное окно с информацией true или false.
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JavaScript Home Work 1</title>
+    <script type="text/javascript">
+
+        var x1 = +prompt('x1?');
+        var y1 = +prompt('y1?');
+        var x2 = +prompt('x2?');
+        var y2 = +prompt('y2?');
+        var k = (y1 - y2) / (x1 - x2);
+        var b = y2 - k*x2;
+
+        document.write(`Рівняння прямої на пощині з точками х1:${x1}, y1:${y1}, x2:${x2}, y2:${y2} :<b> y = ${k}x + ${b}</b>`)
+     
+        /* task2 */
+
+        var a = 4;
+        var b = 7;
+        document.write(`First variable: ${a}, second variable:${b}`)
+        var c = a;
+        a = b;
+        b = c;
+        document.write("First variable: " + a + ", second variable: " + b)
+
+        /* task3 */
+
+        var name = "Vasyl";
+        var admin = name;
+        console.log(admin);
+
+        /* task4 */
+        var firstName = prompt("your first name");
+        var surname = prompt("your surname?");
+        var age = +prompt("your age");
+        document.write(`Your name is ${firstName}, your surname is ${surname}, your age is ${age}`)
+
+        /* task5 */
+        var age = +prompt("Hello! how old are you?");
+        var result = confirm(`Are you ${age} years old?`);
+        alert(`You gave ${result} information`);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
